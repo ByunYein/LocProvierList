@@ -29,16 +29,17 @@ public class LocProviderListActivity extends AppCompatActivity {
 
         mbutton=findViewById(R.id.button);
 
-        String s = "";
-        for(int i=0;i<locProviders.size();i++){
-            s+="Loc. Provider"+locProviders.get(i)+"\n"
-                    +"Status:"+locMgr.isProviderEnabled(locProviders.get(i))+"\n\n";
-        }
+
 
 
         mbutton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                String s = "";
+                for(int i=0;i<locProviders.size();i++){
+                    s+="Loc. Provider"+locProviders.get(i)+"\n"
+                            +"Status:"+locMgr.isProviderEnabled(locProviders.get(i))+"\n\n";
+                }
                 mTextView.setText(s);
             }
         });
